@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: #10152b;
 }
 .projectContainer{
     display: flex;
@@ -20,7 +20,7 @@ body{
 
 @media screen and (min-width:301px) and (max-width:700px){
     body{
-        background-color: gray;
+        background-color: #202744;
     }
     .projectContainer{
         flex-wrap: wrap;
@@ -30,7 +30,7 @@ body{
 
 @media screen and (max-width:300px){
     body{
-        background-color: brown;
+        background-color: #312e55;
     }
     .projectContainer{
         flex-direction: column;

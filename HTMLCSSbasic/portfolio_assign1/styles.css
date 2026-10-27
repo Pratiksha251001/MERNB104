@@ -5,7 +5,7 @@
     padding: 0;
 }
 body{
-    background-color: black;
+    background-color: #10152b;
     color: white;
 }
 header{
@@ -29,10 +29,10 @@ header{
 
 }
 header h1{
-    color: orange;
+    color: #64b5f6;
     text-align: center;
     font-size: 50px;
-    text-shadow: 2px 2px 5px white, 2px 2px 5px red;
+    text-shadow: 2px 2px 5px white, 2px 2px 5px #3949ab;
 }
 header p{
     width: 70%;
@@ -44,7 +44,7 @@ header p{
     /* height: 100px; */
     padding: 20px 10px;
     border: none;
-    background-color: orange;
+    background-color: #3949ab;
     color: white;
     font-size: 20px;
     border-radius: 0px 20px 0px 20px;
@@ -54,7 +54,7 @@ header p{
     border-radius: 20px 0px;
 }
 #qualif{
-    background-color: rgb(32, 32, 32);
+    background-color: #202744;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -65,7 +65,7 @@ table,th, td {
 
 }
 th{
-    background-color: gray;
+    background-color: #5c6bc0;
 }
 th, td {
     padding: 10px;
@@ -75,7 +75,7 @@ td{
 
 }
 tr:nth-child(odd){
-    background-color: pink;
+    background-color: #5c6bc0;
 }
 
 .headingONE{
@@ -87,17 +87,17 @@ tr:nth-child(odd){
 .techSkillDiv{
     width: 80%;
     margin: 30px auto;
-    background-color: orange;
+    background-color: #3949ab;
     text-align: center;
 }
 .leftTechSkill{
     width: 50%;
-    background-color: pink;
+    background-color: #7986cb;
     float: left;
 }
 .rightTechSkill{
     width: 50%;
-    background-color: red;
+    background-color: #5c6bc0;
     float: right;
 }
 .height180{

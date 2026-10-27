@@ -1,0 +1,97 @@
+
+.mainNavbar{
+    background-color: white;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    color: #333;
+}
+.leftNav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.linkedinLogo{
+    background-color: #0a66c2;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 3px;
+}
+.navSearch{
+    width: 220px;
+    padding: 9px 14px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    background-color: #eef3f8;
+}
+.rightNav{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 8px;
+}
+.navList{
+    display: inline-block;
+}
+
+.navItem:link{
+    color: #555;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 14px 9px;
+    font-size: 13px;
+}
+.navItem:hover{
+    color: #0a66c2;
+    border-bottom: 3px solid #0a66c2;
+}
+.navItem:active{
+
+}
+.navItem:visited{
+    color: #555;
+}
+.activePage:link{
+    color: #0a66c2;
+    border-bottom: 3px solid #0a66c2;
+}
+
+@media screen and (min-width:301px) and (max-width:700px){
+    .mainNavbar{
+        padding: 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .rightNav{
+        gap: 0;
+        flex-wrap: wrap;
+    }
+    .navSearch{ width: 150px; }
+}
+
+@media screen and (max-width:300px) {
+    .mainNavbar{
+        padding: 10px;
+        display: block;
+    }
+    .leftNav{
+        margin-bottom: 8px;
+    }
+    .rightNav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navList{
+        padding: 0;
+    }
+}

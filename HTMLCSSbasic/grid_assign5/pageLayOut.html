@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .layout {
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1.05fr 1fr 1fr 1fr;
+            grid-template-rows: 56px minmax(220px, 1fr) 150px 56px;
+            grid-template-areas:
+                "nav nav nav nav"
+                "sidebar main main main"
+                "sidebar content1 content2 content3"
+                "sidebar footer footer footer";
+            gap: 3px;
+            background-color: #fff;
+        }
+
+        .layout > * {
+            padding: 18px;
+            color: #123d3c;
+            font-size: 0.95rem;
+        }
+
+        nav {
+            grid-area: nav;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            background-color: #b7f7e9;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #14e4ea;
+        }
+
+        h2,
+        h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .sidebar ul {
+            display: grid;
+            gap: 12px;
+            padding-left: 18px;
+            line-height: 1.4;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #72eeee;
+        }
+
+        .content-one,
+        .content-two,
+        .content-three {
+            background-color: #61e9c2;
+        }
+
+        .content-one {
+            grid-area: content1;
+        }
+
+        .content-two {
+            grid-area: content2;
+        }
+
+        .content-three {
+            grid-area: content3;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #16d8a9;
+        }
+
+        @media (max-width: 600px) {
+            .layout {
+                width: 100%;
+                min-height: 100vh;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 32px 150px 100px 100px 50px;
+                grid-template-areas:
+                    "nav nav nav"
+                    "sidebar main main"
+                    "sidebar content1 content2"
+                    "sidebar content3 content3"
+                    "sidebar footer footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <nav>
+            <strong>Navbar</strong>
+            <span>Home &nbsp; About &nbsp; Contact</span>
+        </nav>
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Dashboard</li>
+                <li>Profile</li>
+                <li>Services</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+        <main>
+            <h2>Main Section</h2>
+            <p>This is the main area where website information can be displayed.</p>
+        </main>
+        <section class="content-one">
+            <h3>Content 1</h3>
+            <p>This section shows the first feature.</p>
+        </section>
+        <section class="content-two">
+            <h3>Content 2</h3>
+            <p>This section shows the second feature.</p>
+        </section>
+        <section class="content-three">
+            <h3>Content 3</h3>
+            <p>This section shows the third feature.</p>
+        </section>
+        <footer>Footer - Website information and links</footer>
+    </div>
+</body>
+</html>

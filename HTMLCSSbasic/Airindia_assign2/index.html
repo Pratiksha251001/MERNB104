@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple Air India inspired airline homepage built with HTML and CSS.">
+    <title>Air India | Fly the new feeling</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="#" aria-label="Air India home">
+                <span class="brand-mark">AI</span>
+                <span>air india</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a class="active" href="#book">Book</a></li>
+                <li><a href="#manage">Manage</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#offers">Offers</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a class="login-link" href="#">Login</a>
+                <a class="nav-button" href="#book">Book a flight</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Welcome aboard</p>
+                <h1>Fly the <span>new feeling.</span></h1>
+                <p class="hero-text">
+                    Travel the world with warm Indian hospitality and a whole new
+                    way to experience the journey.
+                </p>
+                <a class="primary-button" href="#book">Plan your journey <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="sun"></div>
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <span class="plane">&#9992;</span>
+            </div>
+        </section>
+
+        <section class="booking-card" id="book">
+            <div class="booking-tabs">
+                <a class="selected" href="#book">Book a flight</a>
+                <a href="#manage">Manage booking</a>
+                <a href="#checkin">Check-in</a>
+            </div>
+
+            <div class="trip-options">
+                <label><input type="radio" name="trip" checked> Round trip</label>
+                <label><input type="radio" name="trip"> One way</label>
+                <label><input type="radio" name="trip"> Multi-city</label>
+            </div>
+
+            <form class="flight-form">
+                <label class="input-group">
+                    <span>From</span>
+                    <strong>DEL <small>New Delhi</small></strong>
+                </label>
+                <button class="swap-button" type="button" aria-label="Swap departure and arrival">&harr;</button>
+                <label class="input-group">
+                    <span>To</span>
+                    <strong>BOM <small>Mumbai</small></strong>
+                </label>
+                <label class="input-group">
+                    <span>Departure</span>
+                    <strong>18 <small>Oct 2024</small></strong>
+                </label>
+                <label class="input-group">
+                    <span>Travellers</span>
+                    <strong>1 <small>Adult</small></strong>
+                </label>
+                <button class="search-button" type="submit">Search flights</button>
+            </form>
+        </section>
+
+        <section class="quick-links" id="manage">
+            <div>
+                <p class="eyebrow">Make it yours</p>
+                <h2>Everything you need for a smoother journey.</h2>
+            </div>
+            <div class="link-grid">
+                <a class="info-card" href="#manage">
+                    <span class="card-icon">&#9992;</span>
+                    <span><strong>Manage your trip</strong><small>View or change your booking</small></span>
+                    <b aria-hidden="true">&rarr;</b>
+                </a>
+                <a class="info-card" href="#offers">
+                    <span class="card-icon">&#9733;</span>
+                    <span><strong>Special offers</strong><small>Discover great fares and deals</small></span>
+                    <b aria-hidden="true">&rarr;</b>
+                </a>
+                <a class="info-card" href="#experience">
+                    <span class="card-icon">&#10003;</span>
+                    <span><strong>Travel information</strong><small>Know before you fly</small></span>
+                    <b aria-hidden="true">&rarr;</b>
+                </a>
+            </div>
+        </section>
+
+        <section class="feature-section" id="experience">
+            <div class="section-heading">
+                <p class="eyebrow">Your journey, your way</p>
+                <h2>Travel in comfort and style.</h2>
+                <p>From take-off to landing, enjoy thoughtful service and a warm welcome on every flight.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-number">01</span>
+                    <h3>Comfort in the clouds</h3>
+                    <p>Settle into your seat and enjoy a relaxed journey with carefully planned details.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-number">02</span>
+                    <h3>Taste of India</h3>
+                    <p>Savour delicious flavours inspired by the many regions of India.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-number">03</span>
+                    <h3>Warm hospitality</h3>
+                    <p>Our crew is here to make every moment of your trip feel special.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="offers-section" id="offers">
+            <div>
+                <p class="eyebrow">Fly more, save more</p>
+                <h2>Offers made for your next adventure.</h2>
+            </div>
+            <a class="primary-button" href="#book">Explore fares <span aria-hidden="true">&rarr;</span></a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="brand footer-brand"><span class="brand-mark">AI</span><span>air india</span></div>
+        <p>Flying with purpose. Flying with pride.</p>
+        <p>&copy; 2024 Air India</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.mainNavbar{
+    background-color: #182848;
+    min-height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px #101a33;
+}
+.leftNav{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.brandLogo{
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f9a826;
+    color: #182848;
+    font-size: 24px;
+    font-weight: bold;
+}
+.name111{
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+.rightNav{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style-type: none;
+}
+.navList{
+    display: inline-block;
+}
+.navItem{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px 14px;
+    border-radius: 5px;
+}
+.navItem:hover{
+    color: #f9a826;
+    background-color: #263d6b;
+}
+.activePage{
+    color: #f9a826;
+    border-bottom: 2px solid #f9a826;
+}
+.navButton{
+    color: #182848;
+    background-color: #f9a826;
+    text-decoration: none;
+    display: block;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px){
+    .mainNavbar{
+        padding: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .rightNav{
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+}
