@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find your dream home with Dream Estate.">
+    <title>Dream Estate | Find Your Dream Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="navbar navbar-expand-lg bg-white py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" href="#">
+                    <i class="bi bi-buildings-fill"></i> Dream Estate
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="#home-detail">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#properties">Properties</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="btn btn-primary px-4" href="#contact">Get Started</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-content container text-center text-white" id="home">
+            <p class="small text-uppercase fw-semibold">Find a place you will love</p>
+            <h1 class="display-4 fw-bold">Your Dream Home<br>is Just a Click Away</h1>
+            <p class="mb-4">Discover beautiful homes in the best locations.</p>
+            <a class="btn btn-light text-primary fw-semibold mb-4 px-4" href="./details.html?property=1">Explore Home</a>
+            <form class="search-box row g-2 bg-white p-3 mx-auto text-start">
+                <div class="col-md-3">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-control" placeholder="City or area">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Property Type</label>
+                    <select class="form-select">
+                        <option>Any property</option>
+                        <option>House</option>
+                        <option>Apartment</option>
+                        <option>Villa</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Price Range</label>
+                    <select class="form-select">
+                        <option>Any price</option>
+                        <option>Under $200,000</option>
+                        <option>$200,000 - $500,000</option>
+                        <option>Over $500,000</option>
+                    </select>
+                </div>
+                <div class="col-md-3 d-flex align-items-end">
+                    <button class="btn btn-primary w-100" type="submit"><i class="bi bi-search"></i> Search</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="property-detail-section" id="home-detail">
+            <div class="container">
+                <div class="property-heading d-flex justify-content-between align-items-start flex-wrap gap-2">
+                    <div>
+                        <h2 class="fw-bold mb-1">Beautiful Modern House</h2>
+                        <p class="text-muted mb-0"><i class="bi bi-geo-alt"></i> Kothrud, Pune</p>
+                    </div>
+                    <h4 class="text-primary fw-bold">₹45,000 / month</h4>
+                </div>
+                <div class="row g-4 mt-1">
+                    <div class="col-lg-8">
+                        <img class="detail-main-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Beautiful modern house">
+                        <div class="detail-thumbnails">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=300&q=80" alt="Living room">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=300&q=80" alt="Bedroom">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=300&q=80" alt="Kitchen">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=300&q=80" alt="Dining room">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <form class="inquiry-card" id="contact">
+                            <h5 class="fw-bold">Submit an Inquiry</h5>
+                            <p class="small text-muted">Ask us about this property.</p>
+                            <input class="form-control mb-2" type="text" placeholder="Your name">
+                            <input class="form-control mb-2" type="email" placeholder="Email address">
+                            <input class="form-control mb-2" type="tel" placeholder="Phone number">
+                            <textarea class="form-control mb-3" rows="3" placeholder="Your message"></textarea>
+                            <button class="btn btn-primary w-100" type="submit">Submit Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <h5>Overview</h5>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-2"><small>Property Type</small><strong>Independent House</strong></div>
+                        <div class="col-6 col-md-2"><small>Year Built</small><strong>2022</strong></div>
+                        <div class="col-6 col-md-2"><small>Size (sq.ft.)</small><strong>1,950</strong></div>
+                        <div class="col-6 col-md-2"><small>Bedrooms</small><strong>3</strong></div>
+                        <div class="col-6 col-md-2"><small>Bathrooms</small><strong>2</strong></div>
+                        <div class="col-6 col-md-2"><small>Parking</small><strong>2 Cars</strong></div>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <h5>Address</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6"><strong>Address</strong><span>Ganesh Nagar, Kothrud</span></div>
+                        <div class="col-md-6"><strong>PIN Code</strong><span>411038</span></div>
+                        <div class="col-md-6"><strong>City</strong><span>Pune</span></div>
+                        <div class="col-md-6"><strong>Area</strong><span>Kothrud</span></div>
+                        <div class="col-md-6"><strong>State</strong><span>Maharashtra</span></div>
+                        <div class="col-md-6"><strong>Country</strong><span>India</span></div>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <h5>Description</h5>
+                    <p class="text-muted mb-0">This beautiful modern home is located in a quiet residential area. It
+                        includes an open living room, bright bedrooms, a modular kitchen and spacious parking for the
+                        whole family.</p>
+                </div>
+                <div class="detail-box">
+                    <h5>Details</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6"><strong>Property ID</strong><span>MH450123</span></div>
+                        <div class="col-md-6"><strong>Property Size</strong><span>1,950 sq.ft.</span></div>
+                        <div class="col-md-6"><strong>Property Status</strong><span>For Rent</span></div>
+                        <div class="col-md-6"><strong>Bedrooms</strong><span>3</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="properties">
+            <div class="container">
+                <div class="section-title text-center">
+                    <p class="text-primary fw-semibold mb-1">OUR PROPERTIES</p>
+                    <h2 class="fw-bold">Explore Our Properties</h2>
+                    <p class="text-muted">Find the perfect place to call home.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="property-card-link" href="./details.html?property=1">
+                        <article class="property-card card h-100">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80"
+                                class="card-img-top" alt="Modern white house">
+                            <div class="card-body">
+                                <span class="badge text-bg-primary mb-2">For Sale</span>
+                                <h5 class="card-title">Modern Family House</h5>
+                                <p class="text-muted small"><i class="bi bi-geo-alt"></i> Kothrud, Pune</p>
+                                <strong>$450,000</strong>
+                            </div>
+                        </article>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="property-card-link" href="./details.html?property=2">
+                        <article class="property-card card h-100">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80"
+                                class="card-img-top" alt="Luxury living room">
+                            <div class="card-body">
+                                <span class="badge text-bg-success mb-2">For Rent</span>
+                                <h5 class="card-title">Luxury City Apartment</h5>
+                                <p class="text-muted small"><i class="bi bi-geo-alt"></i> Andheri, Mumbai</p>
+                                <strong>$2,400 / month</strong>
+                            </div>
+                        </article>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="property-card-link" href="./details.html?property=3">
+                        <article class="property-card card h-100">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=700&q=80"
+                                class="card-img-top" alt="House with swimming pool">
+                            <div class="card-body">
+                                <span class="badge text-bg-primary mb-2">For Sale</span>
+                                <h5 class="card-title">Peaceful Garden Villa</h5>
+                                <p class="text-muted small"><i class="bi bi-geo-alt"></i> Whitefield, Bengaluru</p>
+                                <strong>$625,000</strong>
+                            </div>
+                        </article>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="property-card-link" href="./details.html?property=4">
+                        <article class="property-card card h-100">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&q=80"
+                                class="card-img-top" alt="Bright home exterior">
+                            <div class="card-body">
+                                <span class="badge text-bg-primary mb-2">For Sale</span>
+                                <h5 class="card-title">Bright Suburban Home</h5>
+                                <p class="text-muted small"><i class="bi bi-geo-alt"></i> Gomti Nagar, Lucknow</p>
+                                <strong>$390,000</strong>
+                            </div>
+                        </article>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mt-4"><a class="btn btn-outline-primary" href="./details.html?property=1">View Details</a></div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="gallery">
+                            <img class="gallery-main" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+                                alt="Elegant home interior">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80"
+                                alt="Modern bedroom">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=500&q=80"
+                                alt="Bright kitchen">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-primary fw-semibold mb-1">WIDE SELECTION OF PROPERTIES</p>
+                        <h2 class="fw-bold mb-3">A home for every dream</h2>
+                        <p class="text-muted">Whether you are buying your first home or looking for a new investment,
+                            our experienced team is here to make your search simple and enjoyable.</p>
+                        <a class="btn btn-primary mt-2" href="#contact">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us section-padding text-white">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <p class="text-info fw-semibold mb-1">WHY CHOOSE US</p>
+                        <h2 class="fw-bold">Our service is the perfect choice</h2>
+                        <div class="row g-4 mt-2">
+                            <div class="col-sm-6"><strong>01. Local expertise</strong><p>We know the best neighbourhoods and opportunities.</p></div>
+                            <div class="col-sm-6"><strong>02. Trusted advice</strong><p>Clear guidance from search to closing.</p></div>
+                            <div class="col-sm-6"><strong>03. Great support</strong><p>We are here whenever you need us.</p></div>
+                            <div class="col-sm-6"><strong>04. Best value</strong><p>Homes selected to match your budget.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1">
+                        <form class="contact-card bg-white text-dark p-4" id="contact-form">
+                            <h5 class="fw-bold">Get in touch</h5>
+                            <input class="form-control mb-2" type="text" placeholder="Your name">
+                            <input class="form-control mb-2" type="email" placeholder="Email address">
+                            <textarea class="form-control mb-3" rows="3" placeholder="How can we help?"></textarea>
+                            <button class="btn btn-primary w-100" type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <p class="text-primary fw-semibold mb-1">TESTIMONIALS</p>
+                    <h2 class="fw-bold">What our clients say</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4"><div class="testimonial text-center"><i class="bi bi-person-circle fs-1 text-primary"></i><p>“The whole process was easy and stress-free. We found our perfect home!”</p><strong>Ram Sharma</strong></div></div>
+                    <div class="col-md-4"><div class="testimonial text-center"><i class="bi bi-person-circle fs-1 text-primary"></i><p>“Professional, friendly and always ready to answer our questions.”</p><strong>Shyam Verma</strong></div></div>
+                    <div class="col-md-4"><div class="testimonial text-center"><i class="bi bi-person-circle fs-1 text-primary"></i><p>“Dream Estate helped us find a beautiful property within our budget.”</p><strong>Sita Patel</strong></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-white py-4">
+        <div class="container d-md-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold text-white" href="#"><i class="bi bi-buildings-fill"></i> Dream Estate</a>
+            <p class="mb-0 mt-3 mt-md-0">&copy; 2026 Dream Estate. All rights reserved.</p>
+            <div class="mt-3 mt-md-0"><i class="bi bi-facebook me-3"></i><i class="bi bi-instagram me-3"></i><i class="bi bi-twitter-x"></i></div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
