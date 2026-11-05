@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details | Dream Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .details-page {
+            background: #f5f6f7;
+            min-height: 100vh;
+        }
+
+        .details-nav {
+            background: #fff;
+            border-bottom: 3px solid #087fbd;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 6px;
+            padding: 22px;
+        }
+    </style>
+</head>
+
+<body class="details-page">
+    <nav class="navbar details-nav py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="./index.html">
+                <i class="bi bi-buildings-fill"></i> Dream Estate
+            </a>
+            <a class="btn btn-outline-primary" href="./index.html#properties">
+                <i class="bi bi-arrow-left"></i> Back to Properties
+            </a>
+        </div>
+    </nav>
+
+    <main class="property-detail-section d-block">
+        <div class="container">
+            <div class="property-heading d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                    <h1 class="fw-bold mb-1" id="property-title"></h1>
+                    <p class="text-muted mb-0"><i class="bi bi-geo-alt"></i> <span id="property-location"></span></p>
+                </div>
+                <h4 class="text-primary fw-bold" id="property-price"></h4>
+            </div>
+
+            <div class="row g-4 mt-1">
+                <div class="col-lg-8">
+                    <img class="detail-main-image" id="main-image" src="" alt="">
+                    <div class="detail-thumbnails" id="thumbnails"></div>
+                </div>
+                <div class="col-lg-4">
+                    <form class="inquiry-card" onsubmit="return false">
+                        <h5 class="fw-bold">Submit an Inquiry</h5>
+                        <p class="small text-muted">Ask us about this property.</p>
+                        <input class="form-control mb-2" type="text" placeholder="Your name">
+                        <input class="form-control mb-2" type="email" placeholder="Email address">
+                        <input class="form-control mb-2" type="tel" placeholder="Phone number">
+                        <textarea class="form-control mb-3" rows="3" placeholder="Your message"></textarea>
+                        <button class="btn btn-primary w-100" type="submit">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="detail-box">
+                <h5>Overview</h5>
+                <div class="row g-3" id="overview"></div>
+            </div>
+            <div class="detail-box">
+                <h5>Address</h5>
+                <div class="row g-3" id="address"></div>
+            </div>
+            <div class="detail-box">
+                <h5>Information</h5>
+                <p class="text-muted mb-0" id="description"></p>
+            </div>
+            <div class="detail-box">
+                <h5>Details</h5>
+                <div class="row g-3" id="details"></div>
+            </div>
+            <div class="detail-box">
+                <h5>Customer Review</h5>
+                <div class="review-card">
+                    <div class="text-warning mb-2">★★★★★</div>
+                    <p class="mb-2" id="review"></p>
+                    <strong id="reviewer"></strong>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const imageBase = "https://images.unsplash.com/";
+        const properties = {
+            1: {
+                title: "Modern Family House", location: "Kothrud, Pune", price: "₹45,000 / month",
+                images: ["photo-1600585154340-be6161a56a0c", "photo-1600210492486-724fe5c67fb0", "photo-1600607687939-ce8a6c25118c", "photo-1600566753086-00f18fb6b3ea"],
+                overview: [["Property Type", "Independent House"], ["Year Built", "2022"], ["Size", "1,950 sq.ft."], ["Bedrooms", "3"], ["Bathrooms", "2"], ["Parking", "2 Cars"]],
+                address: [["Address", "Ganesh Nagar, Kothrud"], ["PIN Code", "411038"], ["City", "Pune"], ["Area", "Kothrud"], ["State", "Maharashtra"], ["Country", "India"]],
+                description: "A beautiful modern home in a quiet residential area with an open living room, bright bedrooms, modular kitchen and spacious parking.",
+                details: [["Property ID", "MH450123"], ["Property Status", "For Rent"], ["Furnished", "Semi-furnished"], ["Available From", "Immediately"]],
+                review: "The house is exactly as shown in the pictures. The location is peaceful and the support team was very helpful.", reviewer: "Ram Sharma"
+            },
+            2: {
+                title: "Luxury City Apartment", location: "Andheri, Mumbai", price: "₹75,000 / month",
+                images: ["photo-1600607687920-4e2a09cf159d", "photo-1600607688969-a5bfcd646154", "photo-1600210491892-03d54c0aaf87", "photo-1600566753190-17f0baa2a6c3"],
+                overview: [["Property Type", "Luxury Apartment"], ["Year Built", "2021"], ["Size", "1,250 sq.ft."], ["Bedrooms", "2"], ["Bathrooms", "2"], ["Parking", "1 Car"]],
+                address: [["Address", "Lokhandwala Complex, Andheri"], ["PIN Code", "400053"], ["City", "Mumbai"], ["Area", "Andheri West"], ["State", "Maharashtra"], ["Country", "India"]],
+                description: "A stylish city apartment close to offices, shopping and public transport, with excellent views and modern interiors.",
+                details: [["Property ID", "MH750214"], ["Property Status", "For Rent"], ["Furnished", "Fully furnished"], ["Available From", "December 2026"]],
+                review: "A very comfortable apartment in a convenient location. The interiors and building facilities are excellent.", reviewer: "Shyam Verma"
+            },
+            3: {
+                title: "Peaceful Garden Villa", location: "Whitefield, Bengaluru", price: "₹1.25 Crore",
+                images: ["photo-1600047509807-ba8f99d2cdde", "photo-1600566753190-17f0baa2a6c3", "photo-1600585154526-990dced4db0d", "photo-1600607687920-4e2a09cf159d"],
+                overview: [["Property Type", "Garden Villa"], ["Year Built", "2020"], ["Size", "2,450 sq.ft."], ["Bedrooms", "4"], ["Bathrooms", "3"], ["Parking", "2 Cars"]],
+                address: [["Address", "ITPL Main Road, Whitefield"], ["PIN Code", "560066"], ["City", "Bengaluru"], ["Area", "Whitefield"], ["State", "Karnataka"], ["Country", "India"]],
+                description: "A spacious villa with a private garden, natural light and comfortable rooms, perfect for a growing family.",
+                details: [["Property ID", "KA125031"], ["Property Status", "For Sale"], ["Furnished", "Unfurnished"], ["Available From", "Immediately"]],
+                review: "Our family loved the garden and peaceful surroundings. The home has plenty of space for everyone.", reviewer: "Sita Patel"
+            },
+            4: {
+                title: "Bright Suburban Home", location: "Gomti Nagar, Lucknow", price: "₹85 Lakh",
+                images: ["photo-1600566753086-00f18fb6b3ea", "photo-1600585154340-be6161a56a0c", "photo-1600047509807-ba8f99d2cdde", "photo-1600210492486-724fe5c67fb0"],
+                overview: [["Property Type", "Independent House"], ["Year Built", "2019"], ["Size", "1,800 sq.ft."], ["Bedrooms", "3"], ["Bathrooms", "2"], ["Parking", "1 Car"]],
+                address: [["Address", "Viram Khand, Gomti Nagar"], ["PIN Code", "226010"], ["City", "Lucknow"], ["Area", "Gomti Nagar"], ["State", "Uttar Pradesh"], ["Country", "India"]],
+                description: "A bright and welcoming suburban home near schools, parks and local markets, with practical spaces for everyday living.",
+                details: [["Property ID", "UP850407"], ["Property Status", "For Sale"], ["Furnished", "Semi-furnished"], ["Available From", "Immediately"]],
+                review: "The neighbourhood is safe and family-friendly. We were impressed by the home's layout and natural light.", reviewer: "Amit Singh"
+            }
+        };
+
+        const selected = properties[new URLSearchParams(location.search).get("property")] || properties[1];
+        const imageUrl = id => `${imageBase}${id}?auto=format&fit=crop&w=900&q=85`;
+        document.title = `${selected.title} | Dream Estate`;
+        document.getElementById("property-title").textContent = selected.title;
+        document.getElementById("property-location").textContent = selected.location;
+        document.getElementById("property-price").textContent = selected.price;
+        document.getElementById("main-image").src = imageUrl(selected.images[0]);
+        document.getElementById("main-image").alt = selected.title;
+        document.getElementById("thumbnails").innerHTML = selected.images.map((image, index) =>
+            `<img src="${imageUrl(image)}" alt="${selected.title} image ${index + 1}">`).join("");
+        const fields = (items, className = "col-6 col-md-2") => items.map(item =>
+            `<div class="${className}"><small>${item[0]}</small><strong>${item[1]}</strong></div>`).join("");
+        document.getElementById("overview").innerHTML = fields(selected.overview);
+        document.getElementById("address").innerHTML = fields(selected.address, "col-md-6");
+        document.getElementById("details").innerHTML = fields(selected.details, "col-md-6");
+        document.getElementById("description").textContent = selected.description;
+        document.getElementById("review").textContent = `“${selected.review}”`;
+        document.getElementById("reviewer").textContent = selected.reviewer;
+    </script>
+</body>
+
+</html>
